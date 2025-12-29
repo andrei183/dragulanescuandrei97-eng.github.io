@@ -69,3 +69,10 @@ body {
   width: 280px;
   border-radius: 10px;
 }
+/* FORCE REMOVE ANY HERO TEXT */
+.hero *,
+.hero-content,
+.hero h1,
+.hero p {
+  display: none !important;
+}
