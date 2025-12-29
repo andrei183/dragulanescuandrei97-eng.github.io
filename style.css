@@ -1,20 +1,31 @@
+/* RESET */
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: "Arial", sans-serif;
-  background: #0b0b0b;
-  color: #e5e5e5;
+/* BASE */
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #0e0e0e;
+  color: #ffffff;
+  overflow-x: hidden;
 }
 
 /* HERO */
 .hero {
+  width: 100vw;
   height: 100vh;
-  background:
+  background-image:
     linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-    url("hero.png") center / cover no-repeat;
+    url("hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,72 +33,82 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 42px;
-  letter-spacing: 3px;
   color: #d4af37;
-  margin: 0;
+  font-size: 48px;
+  letter-spacing: 4px;
+}
+
+.hero-content p {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #dddddd;
 }
 
 /* ABOUT */
 .about {
   padding: 80px 20px;
+  background: linear-gradient(#111111, #0b0b0b);
   text-align: center;
-  background: #121212;
 }
 
 .about h2 {
-  color: #d4af37;
+  font-size: 32px;
   margin-bottom: 20px;
-  font-weight: 400;
+  color: #d4af37;
 }
 
 .about p {
-  max-width: 700px;
+  max-width: 800px;
   margin: auto;
   line-height: 1.6;
-  color: #ccc;
+  color: #cccccc;
 }
 
 /* SERVICES */
 .services-section {
   padding: 80px 20px;
-  background: #0f0f0f;
+  background-color: #0b0b0b;
   text-align: center;
 }
 
 .services-section h2 {
-  color: #d4af37;
   margin-bottom: 40px;
+  color: #d4af37;
 }
 
 .services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  justify-content: center;
   gap: 20px;
-  max-width: 1000px;
-  margin: auto;
+  flex-wrap: wrap;
 }
 
-.service-box {
-  background: #151515;
+.box {
+  width: 260px;
   padding: 30px;
-  border: 1px solid rgba(212,175,55,0.2);
+  background-color: #141414;
+  border-radius: 12px;
+  color: #cccccc;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-box h3 {
-  color: #d4af37;
-  margin-bottom: 10px;
-  font-weight: 400;
-}
-
-.service-box p {
-  color: #bbb;
-  font-size: 14px;
+.box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
 /* MOBILE */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .hero-content h1 {
-    font-size: 28px;
+    font-size: 34px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
   }
 }
