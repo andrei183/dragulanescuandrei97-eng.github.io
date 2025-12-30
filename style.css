@@ -14,7 +14,7 @@ body {
 /* HERO IMAGE ONLY */
 .hero {
   height: 100vh;
-  background-image: url("hero.png");
+  background-image: url("hero.pdf");
   background-size: cover;
   background-position: center;
 }
