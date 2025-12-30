@@ -49,3 +49,9 @@ body {
   width: 260px;
   border-radius: 10px;
 }
+/* FORCE REMOVE HERO TEXT */
+.hero h1,
+.hero p,
+.hero-content {
+  display: none !important;
+}
