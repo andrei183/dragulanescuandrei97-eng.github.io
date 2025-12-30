@@ -1,20 +1,18 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
   background: #0e0e0e;
-  color: #fff;
-  font-family: Arial, sans-serif;
+  color: #eee;
 }
 
-/* HERO FULL SCREEN IMAGE */
+/* HERO IMAGE */
 .hero {
   height: 100vh;
-  width: 100%;
   background: url("hero.png") center center / cover no-repeat;
 }
 
@@ -26,32 +24,31 @@ body {
 }
 
 .about h2 {
+  font-size: 32px;
   margin-bottom: 20px;
 }
 
 /* SERVICES */
-.services {
+.services-section {
   padding: 60px 20px;
   text-align: center;
 }
 
-.service-boxes {
+.services {
   display: flex;
-  gap: 20px;
   justify-content: center;
+  gap: 20px;
   flex-wrap: wrap;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .box {
   background: #151515;
   padding: 30px;
-  width: 260px;
+  width: 280px;
   border-radius: 10px;
 }
-/* FORCE REMOVE HERO TEXT */
-.hero h1,
-.hero p,
-.hero-content {
-  display: none !important;
+
+.box h3 {
+  margin-bottom: 10px;
 }
